@@ -1,0 +1,2336 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <title>Gracious Garments</title>
+  <style>
+    body {
+      /* background: linear-gradient(blue,purple;); */
+      background-color:  #3A3B3C;
+      overflow-x: hidden;
+    }
+
+    #Product {
+      text-align: center;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .carousel-caption {
+      position: absolute;
+      top: 50%;
+      /* Adjust as needed to vertically center the caption */
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      /* Background color for the caption */
+      color: #fff;
+      /* Text color for the caption */
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    .section {
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .left {
+      transform: translateX(-100%);
+      opacity: 0;
+      transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    }
+
+    .right {
+      transform: translateX(100%);
+      opacity: 0;
+      transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    }
+
+    .show {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    a:hover {
+      background-color: #ddd;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    @media (max-width: 767px) {
+      #productModal1 .modal-dialog {
+        max-width: 40%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #productModal2 .modal-dialog {
+        max-width: 40%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #productModal3 .modal-dialog {
+        max-width: 40%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #productModal4 .modal-dialog {
+        max-width: 40%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #productModal5 .modal-dialog {
+        max-width: 40%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #productModal6 .modal-dialog {
+        max-width: 40%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #productModal7 .modal-dialog {
+        max-width: 40%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #productModal8 .modal-dialog {
+        max-width: 40%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #productModal9 .modal-dialog {
+        max-width: 40%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #productModal10 .modal-dialog {
+        max-width: 40%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #productModal11 .modal-dialog {
+        max-width: 40%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #productModal12 .modal-dialog {
+        max-width: 40%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #productModal13 .modal-dialog {
+        max-width: 40%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #productModal14 .modal-dialog {
+        max-width: 40%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #productModal15 .modal-dialog {
+        max-width: 40%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #productModal16 .modal-dialog {
+        max-width: 40%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #productModal17 .modal-dialog {
+        max-width: 40%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #productModal18 .modal-dialog {
+        max-width: 40%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #productModal19 .modal-dialog {
+        max-width: 40%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #productModal20 .modal-dialog {
+        max-width: 40%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #productModal21 .modal-dialog {
+        max-width: 40%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #productModal22 .modal-dialog {
+        max-width: 40%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #productModal23 .modal-dialog {
+        max-width: 40%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #productModal24 .modal-dialog {
+        max-width: 40%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #productModal25 .modal-dialog {
+        max-width: 40%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #productModal26 .modal-dialog {
+        max-width: 40%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #productModal27 .modal-dialog {
+        max-width: 40%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #productModal28 .modal-dialog {
+        max-width: 40%;
+      }
+    }
+    @media (max-width: 767px) {
+      video {
+        max-width: 100%;
+      }
+    }
+
+    .gallery-item {
+      margin-bottom: 15px;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+      height: 200px;
+    }
+
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    #contact-form {
+      background: linear-gradient( #212529, #212529 ) ,url(img/pic2.webp);
+      
+      border: 1px solid #ddd;
+      padding: 25px;
+      background-clip: border-box;
+    
+      
+    }
+
+    .form-control {
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid white;
+      background-color: transparent;
+      color: #ddd;
+
+    }
+
+    .from {
+      border: 1px solid white;
+    }
+
+
+    #contactus {
+      width: 100%;
+      background-color: #212529;
+      /* height: 600px; */
+    }
+
+    #contact-form {
+      margin-top: 10px;
+      margin-bottom: -10px;
+      height: 96%;
+    }
+
+    #content {
+      height: 1500px;
+    }
+
+    #scrollTopbtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      font-size: 24px;
+      background-color: #ddd;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+    #scrollTopbtn {
+      background-color: #ddd;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .twitter-icon {
+      color: #1da1f2;
+    }
+
+    .facebook-icon {
+      color: #1a4071;
+    }
+
+    .whatsapp-icon {
+      color: #25d366;
+    }
+
+    .instagram-icon {
+      background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #FFC13B);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+ /* Custom CSS */
+.accordion-item {
+  background-color: #212529;
+  border: none;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.accordion-button {
+  background-color: #212529;
+  color: #fff; /* Font color for collapsed state */
+}
+
+.accordion-button:hover {
+  background-color: #343a40; /* Darker shade of #212529 */
+}
+
+.accordion-button:not(.collapsed) {
+  color: #000; /* Font color for expanded state */
+}
+
+.accordion-collapse {
+  background-color: #212529;
+  color: #fff;
+}
+
+.accordion-button:not(.collapsed):focus {
+  box-shadow: none;
+}
+.navbar-nav .nav-link:hover {
+    color: #000 !important;
+    background-color: white !important;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: #333333;" >
+      <div class="container-fluid">
+        <img src="img/logo.jpg" width="65px" style="border-radius: 30px;">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown" style="margin-left:20px ;">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#Home">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#Product" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Products
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#LuxuryWatch">Trendsetting T-Shirts</a></li>
+                <li><a class="dropdown-item" href="#smartWatch">Women's Wear</a></li>
+                <li><a class="dropdown-item" href="#VintageWatch">Adorable Kids Wear</a></li>
+                <li><a class="dropdown-item" href="#smartMenFashion">Smart Men's Fashion</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#storelocater">Store Locater</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#aboutus">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contactus">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faqs">FAQ's</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sitemap">Site Map</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div id="Home">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/graciousgarment template/1.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="img/graciousgarment template/2.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="img/graciousgarment template/3.png" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" ariahidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col col-lg-6">
+          <img src="img/logo.jpg" height="450px" width="450px" style="margin-top:30px; background-color: black; ">
+        </div>
+        <div class="col col-lg-4" style="color:#ddd;margin-left:30px;margin-top:50px;">
+          <h2>GRACIOUS GARMENTS</h2>
+          <p>
+            Step into our garments store for a seamless fusion of style, comfort, and affordability. Our curated collection caters to all tastes and occasions, offering the latest trends alongside timeless classics. Let our knowledgeable staff guide you through quality craftsmanship and contemporary flair, ensuring you find the perfect ensemble with ease. Discover a diverse array of fabrics, colors, and silhouettes, leaving with not just clothing, but a renewed sense of confidence and style. Welcome to a haven where fashion dreams come to life, and you are the protagonist of your own narrative.
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="Product" style="margin-top:30px;">
+    <div id="LuxuryWatch">
+      <h1 style="color:#ddd;">Trendsetting T-Shirts</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="section left" id="leftDiv">
+              <img src="img/pic3.avif" width="450px" height="450px" style="border-radius: 20px;">
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="section right" id="rightDiv" style="color: #ddd;">
+              <h4 style="margin-top:30px;margin-right:40px;">Dive into our collection of t-shirts designed to make a statement. From bold graphics to minimalist designs, find the perfect tee to express your personality and elevate your everyday look.</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/c1.avif" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Designed T-Shirts</h3>
+              <p class="card-text">Rs-5000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary" style="background-color: #212529;" data-toggle="modal" data-target="#productModal1">More
+                Details</button>
+              <button type="button" class="btn btn-success" style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="productModal1" tabindex="-1" role="dialog" aria-labelledby="productModalLabel1"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel1">Designed T-Shirts</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/c1.avif" class="img-fluid" alt="Luxury Watch">
+                <h4>Designed T-Shirts</h4>
+                <p>Rs.5000 <br>Available White Color</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/c2.avif" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Designed T-Shirts</h3>
+              <p class="card-text">Rs-5000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModal2">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="productModal2" tabindex="-1" role="dialog" aria-labelledby="productModalLabel2"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel2">Designed T-Shirts</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/c2.avif" class="img-fluid">
+                <h4>Designed T-Shirts</h4>
+                <p>Rs-5000 <br>Available In White Color</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/c3.avif" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Designed T-Shirts</h3>
+              <p class="card-text">Rs-5000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModal3">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="productModal3" tabindex="-1" role="dialog" aria-labelledby="productModalLabel3"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel3">Designed T-Shirts</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/c3.avif" class="img-fluid">
+                <h4>Designed T-Shirts</h4>
+                <p>Rs-5000 <br>Available In White Color</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/c4.avif" class="card-img-top " height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Designed T-Shirts</h3>
+              <p class="card-text">Rs-5000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModal4">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="productModal4" tabindex="-1" role="dialog" aria-labelledby="productModalLabel4"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="productModalLabel4">Designed T-Shirts</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src="img/c4.avif" class="img-fluid">
+              <h4>Designed T-Shirts</h4>
+              <p>Rs 5000 <br>AvailAble In White Color</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/c5.avif" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Designed T-Shirts</h3>
+              <p class="card-text">Rs-4500</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModal5">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="productModal5" tabindex="-1" role="dialog" aria-labelledby="productModalLabel5"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel5">Designed T-Shirts</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/c5.avif" class="img-fluid">
+                <h4>Designed T-Shirts</h4>
+                <p>Rs 4500 <br>Available In Black Color</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/c6.avif" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Designed T-Shirts</h3>
+              <p class="card-text">Rs-4500</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModal6">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="productModal6" tabindex="-1" role="dialog" aria-labelledby="productModalLabel6"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel6">Designed T-Shirts</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/c6.avif" class="img-fluid">
+                <h4>Designed T-Shirts</h4>
+                <p>Rs-4500 <br>Available In Black Color</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/c7.avif" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Designed T-Shirts</h3>
+              <p class="card-text">Rs-4500</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModal7">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="productModal7" tabindex="-1" role="dialog" aria-labelledby="productModalLabel7"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel7">Designed T-Shirts</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/c7.avif" class="img-fluid">
+                <h4>Designed T-Shirts</h4>
+                <p>Rs 4500 <br> Available In Black Color</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/c8.avif" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Designed T-Shirts</h3>
+              <p class="card-text">Rs-4500</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModal8">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="productModal8" tabindex="-1" role="dialog" aria-labelledby="productModalLabel8"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="productModalLabel8">Designed T-Shirts</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src="img/c8.avif" class="img-fluid">
+              <h4>Designed T-Shirts</h4>
+              <p>Rs 4500 <br>Available In Black Color</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/c9.avif" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Designed T-Shirts</h3>
+              <p class="card-text">Rs-6000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModal9">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="productModal9" tabindex="-1" role="dialog" aria-labelledby="productModalLabel9"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel9">Designed T-Shirts</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/c9.avif" class="img-fluid">
+                <h4>Designed T-Shirts</h4>
+                <p>Rs-6000 <br>Available In Red Color</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/c10.avif" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Designed T-Shirts</h3>
+              <p class="card-text">Rs-6000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModal10">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="productModal10" tabindex="-1" role="dialog" aria-labelledby="productModalLabel10"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel10">Designed T-Shirts</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/c10.avif" class="img-fluid">
+                <h4>Designed T-Shirts</h4>
+                <p>Rs-6000 <br>Available in Red Color</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/c11.avif" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Designed T-Shirts</h3>
+              <p class="card-text">Rs-6000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModal11">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="productModal11" tabindex="-1" role="dialog" aria-labelledby="productModalLabel11"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel11">Designed T-Shirts</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/c11.avif" class="img-fluid">
+                <h4>Designed T-Shirts</h4>
+                <p>Rs-6000 <br>Available In Red Color</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/c12.avif" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Designed T-Shirts</h3>
+              <p class="card-text">Rs-6000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModal12">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="productModal12" tabindex="-1" role="dialog" aria-labelledby="productModalLabel12"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productModalLabel12">Designed T-Shirts</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img src="img/c12.avif" class="img-fluid">
+            <h4>Designed T-Shirts</h4>
+            <p>Rs-6000 <br>Available In Red Color</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="smartWatch">
+      <h1 style="color: #ddd;margin-top:30px;">Women's Wear</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="section left" id="leftDiv">
+              <img src="img/w1.avif" width="450px" height="450px" height="500px" style="border-radius: 20px;">
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="section right" id="rightDiv" style="color: #ddd;">
+              <h4 style="margin-top:30px;">Indulge in our range of women's wear curated to inspire confidence and sophistication. From elegant dresses to versatile tops and bottoms, discover pieces that empower you to conquer the day with style.</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/w2.avif" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Long Coat</h3>
+              <p class="card-text">Rs-9000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModal13">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="productModal13" tabindex="-1" role="dialog" aria-labelledby="productModalLabel13"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel13">Long Coat</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/w2.avif" class="img-fluid">
+                <h4>Long Coat</h4>
+                <p>Rs-9000 <br>New Collection</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/w2s.jpg" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Sweater</h3>
+              <p class="card-text">Rs-7000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModal14">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="productModal14" tabindex="-1" role="dialog" aria-labelledby="productModalLabel14"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel14">Sweater</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/w2s.jpg" class="img-fluid">
+                <h4>Sweater</h4>
+                <p>Rs-7000 <br>New Collection</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/w4.avif" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Fancy Jeans</h3>
+              <p class="card-text">Rs-5500</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModal15">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="productModal15" tabindex="-1" role="dialog" aria-labelledby="productModalLabel15"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel15">Fancy Jeans</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/w4.avif" class="img-fluid">
+                <h4>Fancy Jeans</h4>
+                <p>Rs-5500 <br>New Collection</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/w5.avif" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Stylish Jacket</h3>
+              <p class="card-text">Rs-8000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModal16">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="productModal16" tabindex="-1" role="dialog" aria-labelledby="productModalLabel16"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="productModalLabel16">Stylish Jacket</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src="img/w5.avif" class="img-fluid">
+              <h4>Stylish Jacket</h4>
+              <p>Rs-8000 <br>New Collection</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/w6.avif" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Full Outfit</h3>
+              <p class="card-text">Rs-15,000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModal17">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="productModal17" tabindex="-1" role="dialog" aria-labelledby="productModalLabel17"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel17">Full Outfit</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/w6.avif" class="img-fluid">
+                <h4>Full Outfit</h4>
+                <p>Rs-15,000 <br>New Collection</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/w7.avif" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Full Outfit</h3>
+              <p class="card-text">Rs-15,000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModal18">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="productModal18" tabindex="-1" role="dialog" aria-labelledby="productModalLabel18"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel18">Full Outfit</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/w7.avif" class="img-fluid">
+                <h4>Full Outfit</h4>
+                <p>Rs-15,000 <br>New Collection</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/w8.jpg" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Denim Jacket</h3>
+              <p class="card-text">Rs-9000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModal19">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="productModal19" tabindex="-1" role="dialog" aria-labelledby="productModalLabel19"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel19">Denim Jacket</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/w8.jpg" class="img-fluid">
+                <h4>Denim Jacket</h4>
+                <p>Rs-9000 <br>New Collection</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/w10.jpg" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">White Coat</h3>
+              <p class="card-text">Rs-8000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModal20">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="productModal20" tabindex="-1" role="dialog" aria-labelledby="productModalLabel20"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productModalLabel20">White Coat</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img src="img/w10.jpg" class="img-fluid">
+            <h4>White Coat</h4>
+            <p>Rs-8000 <br>New Collection</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="VintageWatch">
+      <h1 style="color: #ddd;margin-top:30px;">Adorable Kids Wear</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="section left" id="leftDiv">
+              <img src="img/kk.avif" width="450px" height="450px" style="border-radius: 20px;">
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="section right" id="rightDiv" style="color: #ddd;">
+              <h4 style="margin-top:30px;">Explore our adorable collection of kids wear designed to bring joy and comfort to your little ones. From playful prints to cozy essentials, dress your kids in outfits that let them play, explore, and express themselves freely.</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/k1.jpg" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Adorable Froks</h3>
+              <p class="card-text">Rs-5000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModal21">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="productModal21" tabindex="-1" role="dialog" aria-labelledby="productModalLabel21"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel21">Adorable Froks</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/k1.jpg" class="img-fluid">
+                <h4>Adorable Froks</h4>
+                <p>Rs-5000 <br>Available In Different Colors</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/k2.jpg" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Designed Jacket</h3>
+              <p class="card-text">Rs-5000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModal22">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="productModal22" tabindex="-1" role="dialog" aria-labelledby="productModalLabel22"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel22">Designed Jacket</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/2.jpg" class="img-fluid">
+                <h4>Designed Jacket</h4>
+                <p>Rs-5000 <br>Available In Different Colors</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/k3.jpg" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Adorable Froks</h3>
+              <p class="card-text">Rs-5000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModal23">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="productModal23" tabindex="-1" role="dialog" aria-labelledby="productModalLabel23"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel23">Adorable Froks</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/k3.jpg" class="img-fluid">
+                <h4>Adorable Froks</h4>
+                <p>Rs-5000 <br>Available In Different Colors</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/k4.jpg" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Adorable Froks</h3>
+              <p class="card-text">Rs-5000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModal24">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="productModal24" tabindex="-1" role="dialog" aria-labelledby="productModalLabel24"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="productModalLabel24">Adorable Froks</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src="img/k4.jpg" class="img-fluid">
+              <h4>Adorable Froks</h4>
+              <p>Rs-5000 <br>Available In Different Colors</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/k5.jpg" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Printed T-Shirts</h3>
+              <p class="card-text">Rs-2000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModal25">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="productModal25" tabindex="-1" role="dialog" aria-labelledby="productModalLabel25"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel25">Printed T-Shirts</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/k5.jpg" class="img-fluid">
+                <h4>Printed T-Shirts</h4>
+                <p>Rs-2000 <br>Available In Different Color</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/k6.jpg" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Printed NightSuit</h3>
+              <p class="card-text">Rs-5000</p>
+            </div>
+            <div class="card-footer"> 
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModal26">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="productModal26" tabindex="-1" role="dialog" aria-labelledby="productModalLabel26"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel26">Printed NightSuit</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/k6.jpg" class="img-fluid">
+                <h4>Printed NightSuit</h4>
+                <p>Rs-5000 <br>Available In Different Colors</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/k7.jpg" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Printed T-Shirt</h3>
+              <p class="card-text">Rs-2000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModal27">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="productModal27" tabindex="-1" role="dialog" aria-labelledby="productModalLabel27"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel27">Printed T-Shirt</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/k7.jpg" class="img-fluid">
+                <h4>Printed T-Shirt</h4>
+                <p>Rs-2000 <br>Available In Different Colors</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/k8.jpg" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">T-Shirt with Shorts</h3>
+              <p class="card-text">Rs-4000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModal28">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="productModal28" tabindex="-1" role="dialog" aria-labelledby="productModalLabel28"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel28">T-Shirt with Shorts</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/k8.jpg" class="img-fluid">
+                <h4>T-Shirt with Shorts</h4>
+                <p>Rs-4000 <br>Available In Different Colors</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="smartMenFashion">
+      <h1 style="color: #ddd;margin-top:30px;">Smart Men's Fashion</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="section left" id="leftDiv">
+              <img src="img/mm.avif" width="450px" height="450px" style="border-radius: 20px;">
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="section right" id="rightDiv" style="color: #ddd;">
+              <h4 style="margin-top:30px;">Explore our adorable collection of kids wear designed to bring joy and comfort to your little ones. From playful prints to cozy essentials, dress your kids in outfits that let them play, explore, and express themselves freely.</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/m1.avif" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Stylish Suit Wear</h3>
+              <p class="card-text">Rs-10,000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModalstylishblue">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="productModalstylishblue" tabindex="-1" role="dialog" aria-labelledby="productModalstylishblue"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalstylishblue">Stylish Suit Wear</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/m1.avif" class="img-fluid">
+                <h4>Stylish Suit Wear</h4>
+                <p>Rs-10,000 <br>Available In Different Colors</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/m2.avif" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Stylish Suit Wear</h3>
+              <p class="card-text">Rs-10,000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModaLstylishgrey">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="productModaLstylishgrey" tabindex="-1" role="dialog" aria-labelledby="productModaLstylishgrey"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModaLstylishgrey">Stylish Suit Wear</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/m2.avif" class="img-fluid">
+                <h4>Stylish Suit Wear</h4>
+                <p>Rs-10,000 <br>Available In Different Colors</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/m3.avif" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Stylish Suit Wear</h3>
+              <p class="card-text">Rs-10,000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModalred">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="productModalred" tabindex="-1" role="dialog" aria-labelledby="productModalred"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalred">Stylish Suit Wear</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/m3.avif" class="img-fluid">
+                <h4>Stylish Suit Wear</h4>
+                <p>Rs-10,000 <br>Available In Different Colors</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/m4.avif" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Stylish Suit Wear</h3>
+              <p class="card-text">Rs-10,000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModalblack">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="productModalblack" tabindex="-1" role="dialog" aria-labelledby="productModalblack"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="productModalblack">Stylish Suit Wear</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src="img/m4.avif" class="img-fluid">
+              <h4>Stylish Suit Wear</h4>
+              <p>Rs-10,000 <br>Available In Different Colors</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/m5.avif" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">White Shirt</h3>
+              <p class="card-text">Rs-3000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModalwhiteshirt">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="productModalwhiteshirt" tabindex="-1" role="dialog" aria-labelledby="productModalwhiteshirt"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalwhiteshirt">White Shirt</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/m5.avif" class="img-fluid">
+                <h4>White Shirt</h4>
+                <p>Rs-3000 <br>Available In Different Color</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/m6.avif" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">White Shirt</h3>
+              <p class="card-text">Rs-3000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModalwhiteblack">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="productModalwhiteblack" tabindex="-1" role="dialog" aria-labelledby="productModalwhiteblack"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel26">White Shirt</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/m6.avif" class="img-fluid">
+                <h4>White Shirt</h4>
+                <p>Rs-3000 <br>Available In Different Colors</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/m7.avif" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">Cargo Pants</h3>
+              <p class="card-text">Rs-4000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModalcargo">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="productModalcargo" tabindex="-1" role="dialog" aria-labelledby="productModalcargo"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalcargo">Cargo Pants</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/m7.avif" class="img-fluid">
+                <h4>Cargo Pants</h4>
+                <p>Rs-4000 <br>Available In Different Colors</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="margin: 10px;">
+            <img src="img/m8.avif" class="card-img-top" height="400px">
+            <div class="card-body">
+              <h3 class="card-title">White Jeans</h3>
+              <p class="card-text">Rs-4000</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  style="background-color: #212529;" data-toggle="modal" data-target="#productModalwhitejeans">More
+                Details</button>
+              <button type="button" class="btn btn-success"  style="background-color: #3A3B3C;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="productModalwhitejeans" tabindex="-1" role="dialog" aria-labelledby="productModalwhitejeans"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalwhitejeans">White Jeans</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/m8.avif" class="img-fluid">
+                <h4>White Jeans</h4>
+                <p>Rs-4000 <br>Available In Different Colors</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+<div id="faqs" class="container" style="margin-top:30px;">
+  <h1 style="color: #ddd;margin-top:30px; text-align: center;">Frequently Asked Questions</h1>
+
+  <div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Question 1: What are the shipping options?
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Answer: We offer standard and express shipping options. Standard shipping usually takes 3-5 business days, while express shipping delivers within 1-2 business days.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Question 2: What is your return policy?
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Answer: We accept returns within 30 days of purchase. Items must be unworn, with tags attached, and in original packaging for a full refund.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Question 3: Do you offer international shipping?
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Answer: Yes, we offer international shipping to most countries. Shipping rates and delivery times vary depending on the destination.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Question 4: How can I track my order?
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Answer: Once your order has shipped, you will receive a tracking number via email. You can use this number to track your order on our website or through the shipping carrier's website.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFive">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          Question 5: Do you offer gift wrapping?
+        </button>
+      </h2>
+      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Answer: Yes, we offer gift wrapping for a small additional fee. You can select the gift wrapping option during checkout.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+ 
+</div>
+  <!-- <div class="container" style="margin-top:30px;">
+    <table class="table table-dark table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Series No</th>
+          <th scope="col">Most Selling Products</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Classic Oxford Shirt - Gracious Garments Gentlemen's Classic Oxford Shirt</td>
+          <td>Rs-5000</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Slim Fit Chinos - Gracious Garments Men's Slim Fit Chinos</td>
+          <td>Rs-7500</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Tailored Suit (Jacket and Pants) - Gracious Garments Bespoke Tailored Suit (Jacket and Pants) </td>
+          <td>Rs 14,000</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>V-Neck Sweater - Gracious Garments Men's V-Neck Sweater</td>
+          <td>Rs 15,000</td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>Casual Denim Jacket - Gracious Garments Men's Casual Denim Jacket </td>
+          <td>Rs 18,000</td>
+        </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td>Polo Shirt - Gracious Garments Men's Polo Shirt</td>
+          <td>Rs-19,500</td>
+        </tr>
+        <tr>
+          <th scope="row">7</th>
+          <td>Leather Belt - Gracious Garments Genuine Leather Belt</td>
+          <td>Rs-Rs 14,000</td>
+        </tr>
+        <tr>
+          <th scope="row">8</th>
+          <td>Linen Blend Shorts - Gracious Garments Men's Linen Blend Shorts </td>
+          <td>Rs Rs-14,500</td>
+        </tr>
+        <tr>
+          <th scope="row">9</th>
+          <td>Wrap Dress - Gracious Garments Women's Wrap Dress </td>
+          <td>Rs-17,000</td>
+        </tr>
+        <tr>
+          <th scope="row">10</th>
+          <td>Skinny Jeans - Gracious Garments Women's Skinny Jeans</td>
+          <td>Rs-18,000</td>
+        </tr>
+        <tr>
+          <th scope="row">11</th>
+          <td>Blouse with Bow Detail - Gracious Garments Women's Blouse with Bow Detail</td>
+          <td>Rs-18,500</td>
+        </tr>
+        <tr>
+          <th scope="row">12</th>
+          <td>Maxi Skirt - Gracious Garments Women's Maxi Skirt </td>
+          <td>Rs-18,500</td>
+        </tr>
+        <tr>
+          <th scope="row">13</th>
+          <td>Trench Coat - Gracious Garments Women's Trench Coat </td>
+          <td>Rs-17,000</td>
+        </tr>
+        <tr>
+          <th scope="row">14</th>
+          <td>Floral Print Blouse - Gracious Garments Women's Floral Print Blouse</td>
+          <td>Rs-18,000</td>
+        </tr>
+        <tr>
+          <th scope="row">15</th>
+          <td>Knit Cardigan - Gracious Garments Women's Knit Cardigan </td>
+          <td>Rs-18,500</td>
+        </tr>
+        <tr>
+          <th scope="row">16</th>
+          <td>Wide-Leg Jumpsuit - Gracious Garments Women's Wide-Leg Jumpsuit</td>
+          <td>Rs-20,000</td>
+        </tr>
+        <tr>
+          <th scope="row">17</th>
+          <td>Cartoon Graphic T-Shirt (Boys/Girls) - Gracious Garments Kids' Cartoon Graphic T-Shirt </td>
+          <td>Rs-22,000</td>
+        </tr>
+        <tr>
+          <th scope="row">18</th>
+          <td>Denim Overalls (Unisex) - Gracious Garments Kids' Denim Overalls</td>
+          <td>Rs-23,000</td>
+        </tr>
+        <tr>
+          <th scope="row">19</th>
+          <td>Hooded Sweatshirt (Boys/Girls) - Gracious Garments Kids' Hooded Sweatshirt </td>
+          <td>Rs-24,000</td>
+        </tr>
+        <tr>
+          <th scope="row">20</th>
+          <td>Cotton Leggings (Girls) - Gracious Garments Girls' Cotton Leggings</td>
+          <td>Rs-27,000</td>
+        </tr>
+        <tr>
+          <th scope="row">21</th>
+          <td>Cargo Shorts (Boys) - Gracious Garments Boys' Cargo Shorts</td>
+          <td>Rs-10,000</td>
+        </tr>
+        <tr>
+          <th scope="row">22</th>
+          <td>Cargo Shorts (Boys) - Gracious Garments Boys' Cargo Shorts</td>
+          <td>Rs-11,000</td>
+        </tr>
+        <tr>
+          <th scope="row">23</th>
+          <td>Tutu Skirt (Girls) - Gracious Garments Girls' Tutu Skirt</td>
+          <td>Rs-14,500</td>
+        </tr>
+        <tr>
+          <th scope="row">24</th>
+          <td>Quilted Jacket (Unisex) - Gracious Garments Kids' Quilted Jacket</td>
+          <td>Rs-17,000</td>
+        </tr>
+        <tr>
+          <th scope="row">25</th>
+          <td>Wool Blend Scarf (Unisex) - Gracious Garments Wool Blend Scarf </td>
+          <td>Rs-18,000</td>
+        </tr>
+        <tr>
+          <th scope="row">26</th>
+          <td>Canvas Tote Bag (Unisex) - Gracious Garments Canvas Tote Bag</td>
+          <td>Rs-19,700</td>
+        </tr>
+        <tr>
+          <th scope="row">27</th>
+          <td>Sunglasses (Men/Women) - Gracious Garments Sunglasses</td>
+          <td>Rs-23,000</td>
+        </tr>
+        <tr>
+          <th scope="row">28</th>
+          <td>Knit Beanie Hat (Unisex) - Gracious Garments Knit Beanie Hat</td>
+          <td>Rs-24,000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div> -->
+  <div id="storelocater">
+    <!-- <h1
+      style="font-size:40px;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;text-align:center;color: #ddd;">
+      Store Locater</h1> -->
+  <h1 style="color: #ddd;margin-top:30px; text-align: center;">Store Locator</h1>
+
+    <div class="container">
+      <div class="col-12">
+        <iframe src="https://www.google.com/maps/d/embed?mid=1wMZLD-KoIBt-zG0r8ziRkZeqgUA&hl=en_US&ehbc=2E312F"
+          width="100%" height="600"></iframe>
+      </div>
+    </div>
+  </div>
+  <div id="gallery">
+  <h1 style="color: #ddd;margin-top:30px; text-align: center;">Gallery  </h1>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <div class="gallery-item">
+            <img src="img/c4.avif" class="img img-thumbnail"  alt="Image 1">
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="gallery-item">
+            <img src="img/c6.avif" class="img img-thumbnail" alt="Image 2">
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="gallery-item">
+            <img src="img/c7.avif" class="img img-thumbnail" alt="Image 3">
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="gallery-item">
+            <img src="img/w2.avif" class="img img-thumbnail" alt="Image 1">
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="gallery-item">
+            <img src="img/w5.avif" class="img img-thumbnail" alt="Image 2">
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="gallery-item">
+            <img src="img/w4.avif" class="img img-thumbnail" alt="Image 3">
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="gallery-item">
+            <img src="img/k2.jpg" class="img img-thumbnail" alt="Image 1">
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="gallery-item">
+            <img src="img/k5.jpg" class="img img-thumbnail" alt="Image 2">
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="gallery-item">
+            <img src="img/k1.jpg" class="img img-thumbnail" alt="Image 3">
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="gallery-item">
+            <img src="img/gy10.jpg" class="img img-thumbnail" alt="Image 1">
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="gallery-item">
+            <img src="img/k7.jpg" class="img img-thumbnail" alt="Image 2">
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="gallery-item">
+            <img src="img/gy12.jpg" class="img img-thumbnail" alt="Image 3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="aboutus" style="color:#ddd;margin-top:30px;">
+  <h1 style="color: #ddd;margin-top:30px; text-align: center;">About Us</h1>
+
+    <div class="container" style="margin-top:40px;">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>GRACIOUS GARMENTS</h2>
+          <p>Welcome to Gracious Garments, your ultimate destination for men's, women's, and kids' clothing. At Gracious Garments, we believe that fashion should be an expression of individuality, embracing style without sacrificing comfort or quality. With a passion for curating versatile and trendsetting pieces, our mission is to provide a diverse selection that caters to every member of the family. From sophisticated menswear to chic women's apparel and adorable kids' fashion, our collections are thoughtfully curated to inspire confidence and celebrate personal style. With a commitment to excellence in craftsmanship and customer satisfaction, Gracious Garments invites you to explore our world of fashion where every garment tells a unique story. Join us on this journey of style and discovery, and let Gracious Garments be your go-to destination for all your clothing needs.For men, our selection encompasses everything from tailored suits for the boardroom to laid-back casual wear for weekends spent with family and friends. Explore our range of finely crafted shirts, trousers, jackets, and accessories designed to elevate your wardrobe with effortless charm and refinement.
+
+            Ladies, indulge in a world of chic sophistication with our exquisite women's apparel. From glamorous evening gowns to versatile everyday staples, our collection caters to the diverse tastes and lifestyles of modern women. Discover the perfect ensemble for every occasion, whether it's a day at the office, a night on the town, or a weekend getaway.
+            
+            And for the little ones, Gracious Garments offers an enchanting array of kids' clothing that combines whimsical charm with practicality. From adorable outfits for playtime to stylish ensembles for special occasions, we ensure that children can express their unique personalities while staying comfortable and fashionable.
+            <br>
+            CEO of Gracious Garments
+          </p>
+        </div>
+        <div class="col-md-6">
+          <video width="600px" height="700px" autoplay muted loop>
+            <source src="img/www.graciousgarment.com (2).mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+          </video>
+        </div>
+      </div>
+    </div>
+    <div class="container" style="margin-top:40px;">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="img/our2.avif" alt="" width="500px" height="300px" style="border-radius: 20px;">
+        </div>
+        <div class="col-md-6">
+          <h2>Our Story</h2>
+          <p>
+            Nestled in the heart of our city, our garments store story is one of passion and dedication. From humble beginnings to a vibrant destination, we've curated a collection that celebrates individuality. With each stitch, we aim to inspire confidence and ignite creativity. Welcome to our store, where every garment tells a story, and you are the protagonist of your fashion journey.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="contactus" style="margin-top:30px;color:#ddd;">
+      <h1 style="color: #ddd;margin-top:30px; text-align: center;">Contact Us</h1>
+
+    <div class="container mt-1 tank">
+      <div class="row gx-3 gy-3">
+        <div class="col-md-6">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <br>
+            <!-- <div class="form-group">
+              <label for="name">Password</label>
+              <input type="password" class="form-control" id="name" placeholder="Enter your password" required>
+            </div> -->
+            <br>
+            <div class="form-group">
+              <label for="name">Phone no</label>
+              <input type="number" class="form-control" id="name" placeholder="Enter your Phone no" required>
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <br>
+              <textarea class="form-control from" id="message" rows="4" placeholder="Describe your problem.."
+                ></textarea>
+            </div>
+            <br>
+
+            <button id="submit-button" type="submit" class="btn btn-dark" style="background-color: #3A3B3C;">
+              Submit
+            </button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <img src="img/graciousgarment template/6.png" width="600px" height="96%" style="border:1px solid #ddd;margin-top:10px;">
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div id="sitemap" style="background-color:#212529;color: #ddd;margin-top:50px;">
+      <div class="row">
+        <div class="col-md-4" style="margin-top:50px;padding-left:120px;">
+          <h1>Product</h1>
+          <a href="#LuxuryWatch">Mens Wear</a>
+          <br>
+          <a href="#smartWatch">Womens Wear</a>
+          <br>
+          <a href="#VintageWatch">Kids Wear</a>
+          <br>
+          <a href="#VintageWatch">Shoes</a>
+        </div>
+        <div class="col-md-4" style="margin-top:50px;padding-left:90px;">
+          <ul>
+            <h1>Menu</h1>
+            <a href="#Home">Home</a>
+            <br>
+            <a class="dropdown-toggle" href="#Product" id="DropdownMenuLink" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="DropdownMenuLink">
+              <li><a class="dropdown-item" href="#LuxuryWatch">Mens Wear</a></li>
+              <li><a class="dropdown-item" href="#smartWatch">Womens Wear</a></li>
+              <li><a class="dropdown-item" href="#VintageWatch">Kids Wear</a></li>
+              <li><a class="dropdown-item" href="#VintageWatch">Shoes</a></li>
+            </ul>
+            <br>
+            <a href="#storelocater">Store Locater</a>
+            <br>
+            <a href="#gallery">Gallery</a>
+            <br>
+            <a href="#aboutus">About Us</a>
+            <br>
+            <a href="#contactus">Contact us</a>
+            <br>
+            <a href="#sitemap">SiteMap</a>
+          </ul>
+        </div>
+        <div class="col-md-4" style="margin-top:50px;padding-left:120px;">
+          <h1>Contact</h1>
+         State: Pakistan<br> City: Karachi <br>Street: Rashid Minhas Road <br>PhoneNo: 03212087942
+         <br>
+          <a href="https://www.instagram.com/"> <i class="fab fa-instagram instagram-icon"></i></a>
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook facebook-icon"></i>
+          </a>
+          <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter twitter-icon"></i></a>
+          <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp whatsapp-icon"></i></a>
+        </div>
+        <p style="text-align:center;margin-top: 30px;">&copy; 2023 Gracious Garments. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  </div>
+  <button id="scrollTopbtn">↑</button>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+  $(document).ready(function () {
+    $(window).scroll(function () {
+      $(".section").each(function () {
+        var position = $(this).offset().top;
+        var scrollPosition = $(window).scrollTop() + $(window).height() - 100;
+        if (position < scrollPosition) {
+          $(this).addClass("show");
+        }
+      })
+    })
+    $(window).scroll();
+    $('#contactus').on('submit', function (e) {
+      e.preventDefault();
+      // swal("success","message sent successfully!","success");
+      Swal.fire({
+        icon: "success",
+        title: "Your message sent successfully!",
+        showConfirmButton: false,
+        timer: 1500
+      });
+    });
+
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 100) {
+        $('#scrollTopbtn').fadeIn();
+      }
+      else {
+        $('#scrollTopbtn').fadeOut();
+
+      }
+    })
+    $('#scrollTopbtn').click(function () {
+      $('html,body').animate({ scrollTop: 0 }, 800);
+      return false;
+    });
+
+    $('#exampleinput').bind({
+      focus: function () {
+        $(this).css('background-color', '#def3f6');
+      },
+      focus: function () {
+        $(this).css('background-color', '');
+      }
+    });
+  })
+
+</script>
+
+</html>
